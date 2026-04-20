@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Iraq Conditioners Dashboard — FEB 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6fa;color:#222;font-size:13px;line-height:1.45}
+.hdr{background:linear-gradient(90deg,#003d6b,#0070c0);color:#fff;padding:18px 24px;border-bottom:4px solid #f39c12;position:sticky;top:0;z-index:100}
+.hdr h1{font-size:20px;margin-bottom:2px}
+.hdr .sub{font-size:12px;opacity:0.85}
+.nav{background:#fff;padding:10px 24px;border-bottom:1px solid #e0e6ed;overflow-x:auto;white-space:nowrap}
+.nav a{color:#0070c0;font-size:11px;font-weight:600;text-decoration:none;padding:4px 10px;border-radius:3px;display:inline-block;margin-right:2px;cursor:pointer}
+.nav a:hover{background:#e8f4f8}
+.nav a.team-exec{background:#f39c12;color:#fff}
+.nav a.team-mkt{background:#0070c0;color:#fff}
+.nav a.team-sales{background:#27ae60;color:#fff}
+.nav a.team-tm{background:#8e44ad;color:#fff}
+.nav a.team-vatika{background:linear-gradient(90deg,#e67e22,#e74c3c);color:#fff}
+.mx{padding:18px 24px;max-width:1600px;margin:0 auto}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:#fff;border-radius:6px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border-left:4px solid #0070c0}
+.kpi .l{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:0.5px}
+.kpi .v{font-size:24px;font-weight:700;color:#003d6b;margin:4px 0}
+.kpi .s{font-size:11px;color:#888}
+.kpi.g{border-left-color:#2e7d32}
+.kpi.r{border-left-color:#c0392b}
+.kpi.o{border-left-color:#f39c12}
+.dn{color:#c0392b;font-weight:600}
+.up{color:#2e7d32;font-weight:600}
+.sec{margin-bottom:24px}
+.sec h2{font-size:16px;color:#003d6b;border-bottom:2px solid #0070c0;padding-bottom:4px;margin-bottom:10px}
+.sec h2 span{font-size:11px;font-weight:400;color:#666;margin-left:8px}
+.sec h3{font-size:13px;color:#003d6b;margin-top:12px;margin-bottom:8px;font-weight:600}
+.cd{background:#fff;border-radius:6px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px}
+.cd h3{font-size:13px;color:#003d6b;margin-bottom:8px}
+.cd p{font-size:12px;line-height:1.5;color:#555;margin-bottom:8px}
+.tbl{width:100%;border-collapse:collapse;font-size:11px}
+.tbl th{background:#f6f9fc;color:#003d6b;font-weight:600;padding:6px 8px;text-align:left;border-bottom:2px solid #0070c0;font-size:10px;text-transform:uppercase;letter-spacing:0.3px}
+.tbl td{padding:5px 8px;border-bottom:1px solid #eee}
+.tbl tr:hover{background:#fafbfc}
+.tbl tr.vt{background:#e8f5e9 !important;font-weight:600}
+.tbl tr.vt:hover{background:#d6ecd9 !important}
+.badge{display:inline-block;padding:2px 7px;font-size:10px;border-radius:3px;color:#fff;font-weight:600;margin-right:4px}
+.badge.mnc{background:#1f4e79}
+.badge.lebanese{background:#8e44ad}
+.badge.iraqi{background:#607d8b}
+.badge.turkish{background:#c0392b}
+.badge.uae{background:#16a085}
+.badge.iranian{background:#e67e22}
+.badge.indian{background:#2e7d32}
+.badge.other{background:#95a5a6}
+.insight-card{background:#fff;border-radius:6px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border-left:4px solid #f39c12;margin-bottom:12px}
+.insight-card h4{font-size:12px;color:#003d6b;margin-bottom:6px;font-weight:600;text-transform:uppercase}
+.insight-card p{font-size:12px;color:#555;line-height:1.5}
+.tbl-group{overflow-x:auto;margin-bottom:14px}
+</style></head><body>
+<div class="hdr"><h1>Iraq Hair Conditioners — Retail Audit Dashboard</h1>
+<div class="sub">RetailZoom Retail Audit Dipstick (Jan26/Feb26) · Confidential</div></div>
+<div class="nav">
+<a class="team-exec" href="#sec1">Executive Insights</a>
+<a class="team-mkt" href="#sec2">Marketing Team</a>
+<a class="team-sales" href="#sec3">Sales Team</a>
+<a class="team-tm" href="#sec4">Trade Marketing Team</a>
+<a class="team-vatika" href="#sec5">Vatika Potential</a>
+<a href="#sec6">Overview</a>
+<a href="#sec7">Brand Ranking</a>
+<a href="#sec8">Manufacturer</a>
+<a href="#sec9">Geography</a>
+<a href="#sec10">Channel</a>
+<a href="#sec11">Vatika Overview</a>
+<a href="#sec12">Vatika SKUs</a>
+<a href="#sec13">Vatika Geography</a>
+<a href="#sec14">Vatika Channel</a>
+<a href="#sec15">Shares/Region</a>
+<a href="#sec16">Shares/Channel</a>
+<a href="#sec17">Promo Penetration</a>
+<a href="#sec18">Top Promos</a>
+<a href="#sec19">Origin Mix</a>
+<a href="#sec20">Competitive Pos.</a>
+<a href="#sec21">Distribution Eff.</a>
+<a href="#sec22">Growth Decomp.</a>
+<a href="#sec23">Channel Pricing</a>
+<a href="#sec24">Distribution Bench.</a>
+<a href="#sec25">Pricing Segment</a>
+<a href="#sec26">Price Tiers</a>
+<a href="#sec27">Pack Overview</a>
+<a href="#sec28">Pack Cross-Tabs</a>
+<a href="#sec29">Regional Deep-Dive</a>
+<a href="#sec30">Variant Analysis</a>
+</div>
+<div class="mx">
+
+<div id="sec1" class="sec"><h2>1. Executive Insights</h2>
+<div class="insight-card">
+<h4>Market Position</h4>
+<p><strong>Iraq Conditioners Market:</strong> 1,567.4 KLT volume, 11.3 Bn IQD value. Dominated by Lebanese (Cosmal Cure, Soft Wave) and Turkish imports (Ipek), with MNC brands (Elvive, Pantene) capturing premium pricing. Vatika: 0.60% vol share (9.46 KLT), 0.81% val share (91.5 Mn IQD).</p>
+</div>
+<div class="insight-card">
+<h4>Opportunity 1: Distribution Gap</h4>
+<p>Vatika WD=3.77% vs market leaders 25-37%. Massive headroom in weighted distribution—especially in Traditional Trade and South regions where Vatika has 0.12-1.43 KLT penetration vs leaders 200+ KLT.</p>
+</div>
+<div class="insight-card">
+<h4>Opportunity 2: Price Positioning</h4>
+<p>Vatika PPV=9,676 IQD/L matches market average but lags Premium tier (ELVIVE 15,526, PANTENE 12,830). Opportunity to move upmarket via positioning or create value-tier variant (vs ASSAYEL 3,925, HAIR 2,798).</p>
+</div>
+<div class="insight-card">
+<h4>Opportunity 3: Sub-Brand Coverage</h4>
+<p>Market has 309 sub-categories. Vatika shows 1 entry (likely single sub). Competitors dominate via range: ELVIVE (premium), SOFT WAVE (mass value). Variant expansion critical for share gain.</p>
+</div>
+<div class="insight-card">
+<h4>Competitive Threat</h4>
+<p>Turkish imports (Ipek, Duru) growing MoM (+1.47 vol pp for Ipek). Lebanese imports shrinking (Cosmal -1.24pp, Soft Wave +0.67pp). MNCs stable. Market consolidating—requires aggressive activation.</p>
+</div>
+</div>
+
+<div id="sec2" class="sec"><h2>2. Marketing Team</h2>
+<div class="insight-card">
+<h4>Segment Gap: Premium (PPV ≥15K)</h4>
+<p>56 brands led by TOPPER (18,951), WILD SCIENCE, ELVIVE (15,526). Vatika absent. Action: Premium sub-brand launch (moisturizing/repair positioning) to compete with ELVIVE at 15K+ PPV tier.</p>
+</div>
+<div class="insight-card">
+<h4>Segment Gap: Mid-Premium (PPV 8-15K)</h4>
+<p>80 brands including GARNIER (11,629), PANTENE (12,830), UNO CARE (8,494). Vatika (9,676) fits here but lacks visibility. Action: Activate in-store sampling & influencer partnerships at Modern Trade (PERFUMERY 111.5% of market).</p>
+</div>
+<div class="insight-card">
+<h4>Segment Gap: Mass (PPV 4-8K)</h4>
+<p>83 brands led by IPEK (3,912), SOFT WAVE (7,535), TRESEMME (7,187). Growing (+1.47pp for IPEK). Action: Aggressive trade promotions & bundling to defend shelf space vs Turkish/Lebanese challengers.</p>
+</div>
+<div class="insight-card">
+<h4>Segment Gap: Value (PPV <4K)</h4>
+<p>64 brands including ASSAYEL (3,925), HAIR (2,798), DURU (3,498). Highest fragmentation. Action: Test mini/travel sizes at Traditional Trade to penetrate unstructured retail (68.4% of market).</p>
+</div>
+<div class="insight-card">
+<h4>Positioning Risk: Pricing Confusion</h4>
+<p>MNC brands command 2-5x higher PPV (ELVIVE 15.5K vs HAIR 2.8K) on same shelves. Vatika at 9.6K is "middle ground" with no clear story. Action: Define brand architecture—either "premium natural care" or "value everyday care".</p>
+</div>
+</div>
+
+<div id="sec3" class="sec"><h2>3. Sales Team</h2>
+<div class="insight-card">
+<h4>Weighted Distribution Crisis</h4>
+<p>Vatika WD=3.77% vs top 3 brands (25-37%). Missing from ~96% of weighted distribution universe. Top 5 average WD=32%. Action: Priority outlet activation for PERFUMERY (1,747 KLT) and BAGHDAD (1,400 KLT).</p>
+</div>
+<div class="insight-card">
+<h4>Numeric Distribution Lag</h4>
+<p>Vatika ND=0.82% vs IPEK 25.75%, COSMAL CURE 8.37%. Present in <1% of outlets. Action: Door-to-door distributor mapping for Traditional Trade (1,072 KLT) and regional capitals.</p>
+</div>
+<div class="insight-card">
+<h4>Regional Penetration Gaps</h4>
+<p>Vatika concentrated in PERFUMERY (10.54 KLT) and BAGHDAD (8.62 KLT). Zero presence in BASRA (0.12 KLT), SULAYMANIYAH (0.33 KLT), PHARMACY (0.10 KLT). Tier-1: BASRA (334 KLT untapped), KURDISTAN (412 KLT).</p>
+</div>
+<div class="insight-card">
+<h4>Channel Mix Imbalance</h4>
+<p>PERFUMERY dominates (111% of mkt), MODERN TRADE 25.7%, TRADITIONAL TRADE 68.4%. Vatika likely only in MODERN TRADE. Action: Traditional Trade requires new distributor model.</p>
+</div>
+<div class="insight-card">
+<h4>Competitive Field Presence</h4>
+<p>COSMAL CURE WD=36.8%, ND=8.37 (8x Vatika's ND). Field force saturated with Turkish/Lebanese imports. Action: Recruit dedicated Vatika field team for Modern Trade & high-volume Traditional Trade clusters.</p>
+</div>
+</div>
+
+<div id="sec4" class="sec"><h2>4. Trade Marketing Team</h2>
+<div class="insight-card">
+<h4>Promo Penetration Negligible</h4>
+<p>Market: 0.09% promoted items (1.4 KLT). Most brands rely on non-promo positioning. Vatika: assume 0% active promo. Action: First-time buyer promo campaign—bundle with salons or beauty retailers in PERFUMERY.</p>
+</div>
+<div class="insight-card">
+<h4>Channel Pricing Power</h4>
+<p>WASH-OUT (normal): 7,243 IQD/L avg PPV. WASH-OUT LEAVE-IN: 12,214 IQD/L (high-end niche). Vatika at 9,676 is "wash-out premium". Action: Introduce leave-in variant at 12K+ PPV in PERFUMERY & MODERN TRADE.</p>
+</div>
+<div class="insight-card">
+<h4>Pack-Size Pricing Strategy</h4>
+<p>1000ml: 6,321 IQD/L (value), 360ml: 13,057 IQD/L (premium). Leaders use 360ml for value; ELVIVE 400ml premium. Action: Model packs—if 400ml, price at 10-11K; if 360ml, shift to 11-12K via premiumization.</p>
+</div>
+<div class="insight-card">
+<h4>Growth Decomposition: Price vs Volume</h4>
+<p>Leaders show mixed trends: IPEK +1.47pp vol, +1.00pp val (volume-driven), ELVIVE +0.46pp vol, +0.91pp val (price-driven). Vatika +0.05pp vol suggests stagnation. Action: A/B test promo bundles and premium positioning in Baghdad/Perfumery.</p>
+</div>
+<div class="insight-card">
+<h4>Competitive Promo Battleground</h4>
+<p>No major promo brands visible—market driven by positioning, not deals. Opportunity to be first mover with strategic trade bundles (e.g., "salon-recommended"). Action: Partner with top salons in PERFUMERY for co-marketing.</p>
+</div>
+</div>
+
+<div id="sec5" class="sec"><h2>5. Vatika Potential</h2>
+<div class="insight-card">
+<h4>Current Footprint</h4>
+<p><strong>Total Vatika:</strong> 9.46 KLT, 91.5 Mn IQD. WD=3.77%, ND=0.82%. PERFUMERY 111%, BAGHDAD metro. PPV=9,676 IQD/L. Position: 24th rank (0.60% share).</p>
+</div>
+<div class="insight-card">
+<h4>Scenario A: WD Normalization (To 15%)</h4>
+<p>If Vatika achieves WD of 15% (mid-tier brands like GARNIER): Volume potential = 9.46 × (15/3.77) = 37.6 KLT (+298% growth). Value: 363 Mn IQD. Requires: outlet expansion in TRADITIONAL TRADE, SOUTH, KURDISTAN.</p>
+</div>
+<div class="insight-card">
+<h4>Scenario B: PPV Upgrade (To 12K)</h4>
+<p>If Vatika repositions to premium (12K PPV vs current 9.6K): Same 9.46 KLT at 12K = 113.5 Mn IQD (vs 91.5 Mn). +23.4% value, +0% volume. Requires: new sub-brand (moisturizing), premium pack, salon partnerships.</p>
+</div>
+<div class="insight-card">
+<h4>Scenario C: Combined Growth (WD 12%, PPV 11K)</h4>
+<p>Volume: 9.46 × (12/3.77) = 30.1 KLT. Value: 30.1 × 11K = 331 Mn IQD (vs 91.5 Mn = +262%). Realistic 2-year target. Requires: 2-3 regional distributors, 1 new sub-brand, 8-10 salon collaborations per region.</p>
+</div>
+<div class="insight-card">
+<h4>Geographic Priorities (Ranked by Upside)</h4>
+<p><strong>Tier-1 (Fast):</strong> BASRA (334 KLT, V 0.12), MUSSEL (356 KLT, V 1.7), FURAT (221 KLT, V 1.2). <strong>Tier-2 (Medium):</strong> KURDISTAN (412 KLT, V 1.44). <strong>Tier-3 (Build):</strong> PHARMACY (30 KLT). Addressable: 1,350 KLT where Vatika <2% penetrated.</p>
+</div>
+</div>
+
+<div id="sec6" class="sec"><h2>6. Market Overview<span>FEB 2026 Total Iraq</span></h2>
+<div class="kpis">
+<div class="kpi"><div class="l">Total Iraq Volume</div><div class="v">1,567.4</div><div class="s">K Litres</div></div>
+<div class="kpi"><div class="l">Total Iraq Value</div><div class="v">11,340.5</div><div class="s">Mn IQD</div></div>
+<div class="kpi"><div class="l">Market PPV</div><div class="v">7,240</div><div class="s">IQD/L Avg</div></div>
+<div class="kpi g"><div class="l">Vatika Volume</div><div class="v">9.46</div><div class="s">K Litres (0.60%)</div></div>
+<div class="kpi g"><div class="l">Vatika Value</div><div class="v">91.49</div><div class="s">Mn IQD (0.81%)</div></div>
+<div class="kpi o"><div class="l">Active Brands</div><div class="v">283</div><div class="s">in market</div></div>
+</div></div>
+
+<div id="sec7" class="sec"><h2>7. Brand Ranking<span>Top 25 by Volume — FEB 2026</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>#</th><th>Brand</th><th>Origin</th><th>VOL KLT</th><th>VOL%</th><th>JAN %</th><th>pp</th><th>VAL Mn IQD</th><th>VAL%</th><th>PPV</th><th>ND%</th><th>WD%</th></tr></thead><tbody>
+<tr><td>1</td><td>COSMAL CURE</td><td><span class="badge lebanese">Lebanese</span></td><td>227.72</td><td>14.53%</td><td>15.77%</td><td><span class="dn">-1.24</span></td><td>1158.0</td><td>10.21%</td><td>5,085</td><td>8.37</td><td>36.84</td></tr>
+<tr><td>2</td><td>IPEK</td><td><span class="badge turkish">Turkish</span></td><td>192.29</td><td>12.27%</td><td>10.80%</td><td><span class="up">+1.47</span></td><td>752.3</td><td>6.63%</td><td>3,912</td><td>25.75</td><td>30.93</td></tr>
+<tr><td>3</td><td>HAIR</td><td><span class="badge iraqi">Iraqi</span></td><td>144.88</td><td>9.24%</td><td>8.69%</td><td><span class="up">+0.56</span></td><td>405.4</td><td>3.58%</td><td>2,798</td><td>22.71</td><td>27.90</td></tr>
+<tr><td>4</td><td>TRESEMME</td><td><span class="badge mnc">MNC</span></td><td>109.03</td><td>6.96%</td><td>6.56%</td><td><span class="up">+0.39</span></td><td>783.6</td><td>6.91%</td><td>7,187</td><td>8.06</td><td>36.24</td></tr>
+<tr><td>5</td><td>SOFT WAVE</td><td><span class="badge lebanese">Lebanese</span></td><td>94.53</td><td>6.03%</td><td>5.36%</td><td><span class="up">+0.67</span></td><td>712.3</td><td>6.28%</td><td>7,535</td><td>16.35</td><td>53.91</td></tr>
+<tr><td>6</td><td>GARNIER</td><td><span class="badge mnc">MNC</span></td><td>84.96</td><td>5.42%</td><td>5.25%</td><td><span class="up">+0.17</span></td><td>988.0</td><td>8.71%</td><td>11,629</td><td>5.01</td><td>24.41</td></tr>
+<tr><td>7</td><td>ELVIVE</td><td><span class="badge mnc">MNC</span></td><td>74.65</td><td>4.76%</td><td>4.30%</td><td><span class="up">+0.46</span></td><td>1159.1</td><td>10.22%</td><td>15,526</td><td>2.82</td><td>21.67</td></tr>
+<tr><td>8</td><td>PANTENE</td><td><span class="badge mnc">MNC</span></td><td>70.55</td><td>4.50%</td><td>4.75%</td><td><span class="dn">-0.24</span></td><td>905.1</td><td>7.98%</td><td>12,830</td><td>4.63</td><td>19.57</td></tr>
+<tr><td>9</td><td>ASSAYEL</td><td><span class="badge iraqi">Iraqi</span></td><td>45.84</td><td>2.92%</td><td>2.83%</td><td><span class="up">+0.09</span></td><td>179.9</td><td>1.59%</td><td>3,925</td><td>4.05</td><td>9.84</td></tr>
+<tr><td>10</td><td>DURU</td><td><span class="badge turkish">Turkish</span></td><td>38.58</td><td>2.46%</td><td>2.53%</td><td><span class="dn">-0.07</span></td><td>135.0</td><td>1.19%</td><td>3,498</td><td>4.42</td><td>8.49</td></tr>
+<tr><td>11</td><td>UNO CARE</td><td><span class="badge other">Other</span></td><td>31.12</td><td>1.99%</td><td>2.37%</td><td><span class="dn">-0.38</span></td><td>264.3</td><td>2.33%</td><td>8,494</td><td>0.76</td><td>9.66</td></tr>
+<tr><td>12</td><td>HAIR 2000</td><td><span class="badge iraqi">Iraqi</span></td><td>28.58</td><td>1.82%</td><td>1.85%</td><td><span class="dn">-0.03</span></td><td>93.2</td><td>0.82%</td><td>3,260</td><td>4.87</td><td>6.48</td></tr>
+<tr><td>13</td><td>LY</td><td><span class="badge other">Other</span></td><td>22.44</td><td>1.43%</td><td>1.54%</td><td><span class="dn">-0.11</span></td><td>188.7</td><td>1.66%</td><td>8,408</td><td>3.26</td><td>11.52</td></tr>
+<tr><td>14</td><td>BEFFISSIMA LOOK</td><td><span class="badge uae">UAE</span></td><td>20.18</td><td>1.29%</td><td>1.44%</td><td><span class="dn">-0.16</span></td><td>141.9</td><td>1.25%</td><td>7,031</td><td>0.41</td><td>6.78</td></tr>
+<tr><td>15</td><td>BRAVO LADY</td><td><span class="badge other">Other</span></td><td>16.26</td><td>1.04%</td><td>0.85%</td><td><span class="up">+0.18</span></td><td>108.7</td><td>0.96%</td><td>6,681</td><td>0.91</td><td>5.52</td></tr>
+<tr><td>16</td><td>HAIR UPCARE</td><td><span class="badge iraqi">Iraqi</span></td><td>14.74</td><td>0.94%</td><td>0.72%</td><td><span class="up">+0.22</span></td><td>83.7</td><td>0.74%</td><td>5,677</td><td>2.87</td><td>3.64</td></tr>
+<tr><td>17</td><td>BIRDS</td><td><span class="badge iraqi">Iraqi</span></td><td>14.00</td><td>0.89%</td><td>0.99%</td><td><span class="dn">-0.10</span></td><td>80.6</td><td>0.71%</td><td>5,755</td><td>0.22</td><td>2.24</td></tr>
+<tr><td>18</td><td>TOPPER</td><td><span class="badge iraqi">Iraqi</span></td><td>12.77</td><td>0.81%</td><td>0.92%</td><td><span class="dn">-0.10</span></td><td>242.0</td><td>2.13%</td><td>18,951</td><td>0.55</td><td>9.23</td></tr>
+<tr><td>19</td><td>OZELL</td><td><span class="badge other">Other</span></td><td>11.81</td><td>0.75%</td><td>0.59%</td><td><span class="up">+0.16</span></td><td>38.8</td><td>0.34%</td><td>3,288</td><td>1.10</td><td>1.41</td></tr>
+<tr><td>20</td><td>HEAD&SHOULDERS</td><td><span class="badge mnc">MNC</span></td><td>11.65</td><td>0.74%</td><td>0.69%</td><td><span class="up">+0.05</span></td><td>150.8</td><td>1.33%</td><td>12,946</td><td>0.79</td><td>3.98</td></tr>
+<tr><td>21</td><td>ROSE LIFE</td><td><span class="badge other">Other</span></td><td>10.62</td><td>0.68%</td><td>0.70%</td><td><span class="dn">-0.02</span></td><td>89.3</td><td>0.79%</td><td>8,410</td><td>1.13</td><td>4.01</td></tr>
+<tr><td>22</td><td>HAIR 2000 UPCARE</td><td><span class="badge iraqi">Iraqi</span></td><td>10.03</td><td>0.64%</td><td>0.54%</td><td><span class="up">+0.10</span></td><td>32.2</td><td>0.28%</td><td>3,208</td><td>1.91</td><td>2.80</td></tr>
+<tr><td>23</td><td>GOLRANG</td><td><span class="badge iranian">Iranian</span></td><td>9.93</td><td>0.63%</td><td>0.53%</td><td><span class="up">+0.10</span></td><td>30.9</td><td>0.27%</td><td>3,110</td><td>1.13</td><td>2.99</td></tr>
+<tr class="vt"><td>24</td><td>VATIKA</td><td><span class="badge indian">Indian</span></td><td>9.46</td><td>0.60%</td><td>0.55%</td><td><span class="up">+0.05</span></td><td>91.5</td><td>0.81%</td><td>9,676</td><td>0.82</td><td>3.77</td></tr>
+<tr><td>25</td><td>ARGAN</td><td><span class="badge other">Other</span></td><td>9.07</td><td>0.58%</td><td>0.47%</td><td><span class="up">+0.10</span></td><td>74.0</td><td>0.65%</td><td>8,160</td><td>0.48</td><td>2.59</td></tr>
+</tbody></table></div></div>
+
+<div id="sec8" class="sec"><h2>8. Manufacturer Ranking<span>Top 10 MFR by Volume</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Rank</th><th>Manufacturer</th><th>Vol KLT</th><th>Vol %</th><th>Val Mn IQD</th><th>PPV</th><th>WD %</th></tr></thead><tbody>
+<tr><td>1</td><td>COSMALINE</td><td>227.72</td><td>14.53%</td><td>1158.0</td><td>5,085</td><td>36.84</td></tr>
+<tr><td>2</td><td>CANANKOZMETIK</td><td>192.29</td><td>12.27%</td><td>752.3</td><td>3,912</td><td>30.93</td></tr>
+<tr><td>3</td><td>HAIR</td><td>144.88</td><td>9.24%</td><td>405.4</td><td>2,798</td><td>27.90</td></tr>
+<tr><td>4</td><td>UNILEVER</td><td>179.58</td><td>11.46%</td><td>1688.7</td><td>9,404</td><td>26.73</td></tr>
+<tr><td>5</td><td>LOREAL</td><td>74.65</td><td>4.76%</td><td>1159.1</td><td>15,526</td><td>21.67</td></tr>
+<tr><td>6</td><td>ASSAYEL</td><td>45.84</td><td>2.92%</td><td>179.9</td><td>3,925</td><td>9.84</td></tr>
+<tr><td>7</td><td>DABUR</td><td>9.46</td><td>0.60%</td><td>91.5</td><td>9,676</td><td>3.77</td></tr>
+</tbody></table></div></div>
+
+<div id="sec9" class="sec"><h2>9. Geography Breakdown<span>Top 10 Regions by Volume</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Region</th><th>Vol KLT</th><th>Vol %</th><th>Val Mn IQD</th><th>Val %</th><th>PPV</th></tr></thead><tbody>
+<tr><td>TOTAL PERFUMERY</td><td>1,747.92</td><td>111.51%</td><td>16,110.7</td><td>142.06%</td><td>9,207</td></tr>
+<tr><td>TOTAL BAGHDAD</td><td>1,399.91</td><td>89.31%</td><td>11,709.8</td><td>103.26%</td><td>8,365</td></tr>
+<tr><td>TOTAL TRADITIONAL TRADE</td><td>1,072.62</td><td>68.43%</td><td>4,858.5</td><td>42.84%</td><td>4,527</td></tr>
+<tr><td>TOTAL SOUTH</td><td>670.58</td><td>42.78%</td><td>4,347.9</td><td>38.34%</td><td>6,486</td></tr>
+<tr><td>TOTAL NORTH</td><td>549.11</td><td>35.03%</td><td>3,598.8</td><td>31.73%</td><td>6,556</td></tr>
+<tr><td>TOTAL KURDISTAN</td><td>412.34</td><td>26.31%</td><td>2,849.0</td><td>25.12%</td><td>6,912</td></tr>
+<tr><td>TOTAL MODERN TRADE</td><td>402.15</td><td>25.66%</td><td>2,644.5</td><td>23.32%</td><td>6,578</td></tr>
+<tr><td>TOTAL MUSEL</td><td>356.26</td><td>22.73%</td><td>2,344.7</td><td>20.68%</td><td>6,579</td></tr>
+<tr><td>TOTAL BASRA</td><td>333.05</td><td>21.25%</td><td>2,358.1</td><td>20.79%</td><td>7,077</td></tr>
+</tbody></table></div></div>
+
+<div id="sec10" class="sec"><h2>10. Channel Breakdown<span>WASH-OUT vs WASH-OUT LEAVE-IN</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Channel</th><th>Vol KLT</th><th>Vol %</th><th>Val Mn IQD</th><th>PPV</th><th>Brands</th></tr></thead><tbody>
+<tr><td>WASH-OUT</td><td>1,139.09</td><td>72.67%</td><td>8,250.4</td><td>7,243</td><td>283</td></tr>
+<tr><td>WASH-OUT LEAVE-IN</td><td>428.36</td><td>27.33%</td><td>3,090.1</td><td>7,214</td><td>156</td></tr>
+</tbody></table></div></div>
+
+<div id="sec11" class="sec"><h2>11. Vatika Overview<span>Position & Performance vs Market</span></h2>
+<div class="kpis">
+<div class="kpi g"><div class="l">Vatika Volume</div><div class="v">9.46</div><div class="s">K Litres</div></div>
+<div class="kpi g"><div class="l">Vol Share</div><div class="v">0.60%</div><div class="s">Rank 24</div></div>
+<div class="kpi g"><div class="l">Vatika Value</div><div class="v">91.49</div><div class="s">Mn IQD</div></div>
+<div class="kpi g"><div class="l">Val Share</div><div class="v">0.81%</div><div class="s">Premium to Vol</div></div>
+<div class="kpi o"><div class="l">PPV</div><div class="v">9,676</div><div class="s">IQD/L</div></div>
+<div class="kpi"><div class="l">Distribution Eff</div><div class="v">21.41</div><div class="s">Val%/WD ratio</div></div>
+</div>
+<div class="cd"><h3>Positioning Analysis</h3>
+<p><strong>PPV vs Market:</strong> Vatika at 9,676 IQD/L matches market avg (7,240), sitting in mid-premium segment between value (HAIR 2,798) and premium (ELVIVE 15,526). <strong>Growth:</strong> +0.05 pp MoM (9.46 KLT vs 8.63 JAN = +10.6% YoY equivalent). <strong>Distribution Efficiency:</strong> 21.41 places Vatika in upper quartile—good pricing leverage relative to weighted distribution.</p>
+</div>
+</div>
+
+<div id="sec12" class="sec"><h2>12. Vatika SKU Portfolio<span>Products & Sizes in Market</span></h2>
+<div class="cd"><p><strong>Current State:</strong> Vatika appears as single aggregate in data. Full SKU breakdown requires product audit. Estimated SKU count: 1-3 variants. <strong>Opportunity:</strong> Launch 3-5 sub-variants (moisturizing, anti-dandruff, color protection) across size tiers (200ml, 400ml, 1000ml) to compete with ELVIVE 5+ variant range.</p></div>
+</div>
+
+<div id="sec13" class="sec"><h2>13. Vatika by Geography<span>Regional Sales Breakdown</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Region</th><th>Vol KLT</th><th>Val Mn IQD</th><th>PPV</th><th>Region %</th></tr></thead><tbody>
+<tr><td>TOTAL PERFUMERY</td><td>10.54</td><td>108.4</td><td>10,289</td><td>111.51%</td></tr>
+<tr><td>TOTAL BAGHDAD</td><td>8.62</td><td>80.1</td><td>9,306</td><td>61.52%</td></tr>
+<tr><td>TOTAL MODERN TRADE</td><td>6.69</td><td>61.4</td><td>9,179</td><td>16.65%</td></tr>
+<tr><td>TOTAL SOUTH</td><td>4.48</td><td>49.9</td><td>11,139</td><td>0.67%</td></tr>
+<tr><td>TOTAL NORTH</td><td>3.00</td><td>28.3</td><td>9,433</td><td>0.55%</td></tr>
+</tbody></table></div></div>
+
+<div id="sec14" class="sec"><h2>14. Vatika by Channel<span>Wash-Out & Premium Segment Presence</span></h2>
+<div class="cd"><p>Vatika present primarily in WASH-OUT standard conditioning channel. <strong>Opportunity:</strong> Expand into WASH-OUT LEAVE-IN (premium tier, 27.3% of market) to capture upmarket share. Current positioning: mass-to-mid-premium segment suitable for both channels.</p></div>
+</div>
+
+<div id="sec15" class="sec"><h2>15. Brand Shares by Region<span>Top Brands in Each Geographic Hub</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Region</th><th>Top Brand</th><th>Vol KLT</th><th>Share %</th><th>2nd Brand</th></tr></thead><tbody>
+<tr><td>TOTAL PERFUMERY</td><td>COSMAL CURE</td><td>301.2</td><td>17.24%</td><td>IPEK</td></tr>
+<tr><td>TOTAL BAGHDAD</td><td>COSMAL CURE</td><td>231.5</td><td>16.54%</td><td>IPEK</td></tr>
+<tr><td>TOTAL TRADITIONAL TRADE</td><td>COSMAL CURE</td><td>201.8</td><td>18.82%</td><td>SOFT WAVE</td></tr>
+<tr><td>TOTAL SOUTH</td><td>COSMAL CURE</td><td>104.5</td><td>15.59%</td><td>HAIR</td></tr>
+<tr><td>TOTAL NORTH</td><td>IPEK</td><td>68.3</td><td>12.45%</td><td>COSMAL CURE</td></tr>
+</tbody></table></div></div>
+
+<div id="sec16" class="sec"><h2>16. Brand Shares by Channel<span>WASH-OUT vs WASH-OUT LEAVE-IN Mix</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Channel</th><th>Top Brand</th><th>Vol KLT</th><th>Share %</th><th>PPV</th></tr></thead><tbody>
+<tr><td>WASH-OUT</td><td>COSMAL CURE</td><td>227.7</td><td>19.99%</td><td>5,085</td></tr>
+<tr><td>WASH-OUT</td><td>IPEK</td><td>192.3</td><td>16.87%</td><td>3,912</td></tr>
+<tr><td>WASH-OUT LEAVE-IN</td><td>TRESEMME</td><td>109.0</td><td>25.43%</td><td>7,187</td></tr>
+<tr><td>WASH-OUT LEAVE-IN</td><td>ELVIVE</td><td>74.7</td><td>17.42%</td><td>15,526</td></tr>
+</tbody></table></div></div>
+
+<div id="sec17" class="sec"><h2>17. Promo Penetration<span>Promoted vs Non-Promoted Items</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Promo Status</th><th>Vol KLT</th><th>Vol %</th><th>Val Mn IQD</th><th>PPV</th><th>Brands</th></tr></thead><tbody>
+<tr><td>NON PROMOTED ITEM</td><td>1,139.09</td><td>72.67%</td><td>8,253.3</td><td>7,245</td><td>283</td></tr>
+<tr><td>PROMOTED ITEM</td><td>428.36</td><td>27.33%</td><td>3,087.2</td><td>7,210</td><td>156</td></tr>
+</tbody></table></div></div>
+
+<div id="sec18" class="sec"><h2>18. Top Promo Brands<span>High-Promotion Item Activity</span></h2>
+<div class="cd"><p><strong>Finding:</strong> Market shows minimal promo activity overall. Promo items represent 27.3% of volume with no "promo-specific" brand dominance. Most brands rely on standard positioning. <strong>Vatika:</strong> Assume 0% promo presence. <strong>Action:</strong> Strategic first-mover advantage with trial/sampling promo in PERFUMERY & MODERN TRADE to build brand trial and accelerate adoption.</p></div>
+</div>
+
+<div id="sec19" class="sec"><h2>19. Origin Mix Analysis<span>Import vs Local Composition</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Origin</th><th>Vol KLT</th><th>Vol %</th><th>Val Mn IQD</th><th>Brands</th><th>Avg PPV</th></tr></thead><tbody>
+<tr><td>MNC</td><td>367.60</td><td>23.45%</td><td>4,160.4</td><td>12</td><td>11,315</td></tr>
+<tr><td>Lebanese</td><td>329.96</td><td>21.05%</td><td>1,931.4</td><td>3</td><td>5,851</td></tr>
+<tr><td>Other</td><td>323.74</td><td>20.65%</td><td>2,932.1</td><td>248</td><td>9,058</td></tr>
+<tr><td>Iraqi</td><td>270.84</td><td>17.28%</td><td>1,116.8</td><td>7</td><td>4,124</td></tr>
+<tr><td>Turkish</td><td>230.87</td><td>14.73%</td><td>887.3</td><td>2</td><td>3,844</td></tr>
+<tr><td>UAE</td><td>22.91</td><td>1.46%</td><td>155.9</td><td>3</td><td>6,801</td></tr>
+<tr><td>Iranian</td><td>9.93</td><td>0.63%</td><td>30.9</td><td>1</td><td>3,110</td></tr>
+<tr><td>Indian</td><td>9.46</td><td>0.60%</td><td>91.5</td><td>1</td><td>9,676</td></tr>
+</tbody></table></div></div>
+
+<div id="sec20" class="sec"><h2>20. Competitive Positioning<span>PPV vs Market Share Quadrant — Top 20 Brands</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Brand</th><th>PPV IQD</th><th>Vol Share %</th><th>Tier</th><th>Context</th></tr></thead><tbody>
+<tr><td>ELVIVE</td><td>15,526</td><td>4.76%</td><td>Premium Leader</td><td>MNC premium; high margin</td></tr>
+<tr><td>PANTENE</td><td>12,830</td><td>4.50%</td><td>Premium Leader</td><td>MNC quality premium</td></tr>
+<tr><td>HEAD&SHOULDERS</td><td>12,946</td><td>0.74%</td><td>Premium Leader</td><td>Specialized niche</td></tr>
+<tr><td>GARNIER</td><td>11,629</td><td>5.42%</td><td>Mass Leader</td><td>Premium-mass hybrid</td></tr>
+<tr><td>VATIKA</td><td>9,676</td><td>0.60%</td><td>Niche Premium</td><td>Opportunity: volume or premium shift</td></tr>
+<tr><td>UNO CARE</td><td>8,494</td><td>1.99%</td><td>Niche Premium</td><td>Minor mid-range player</td></tr>
+<tr><td>LY</td><td>8,408</td><td>1.43%</td><td>Niche Premium</td><td>Regional niche</td></tr>
+<tr><td>TRESEMME</td><td>7,187</td><td>6.96%</td><td>Mass Leader</td><td>Mid-mass positioning</td></tr>
+<tr><td>SOFT WAVE</td><td>7,535</td><td>6.03%</td><td>Mass Leader</td><td>Lebanese import; stable</td></tr>
+<tr><td>COSMAL CURE</td><td>5,085</td><td>14.53%</td><td>Mass Leader</td><td>Dominant; mass price</td></tr>
+<tr><td>IPEK</td><td>3,912</td><td>12.27%</td><td>Mass Leader</td><td>Growth +1.47pp; volume game</td></tr>
+<tr><td>ASSAYEL</td><td>3,925</td><td>2.92%</td><td>Value Player</td><td>Iraqi value brand</td></tr>
+<tr><td>HAIR</td><td>2,798</td><td>9.24%</td><td>Value Player</td><td>Lowest price; high volume</td></tr>
+<tr><td>DURU</td><td>3,498</td><td>2.46%</td><td>Value Player</td><td>Turkish ultra-value</td></tr>
+</tbody></table></div></div>
+
+<div id="sec21" class="sec"><h2>21. Distribution Efficiency<span>Val% ÷ WD Ratio — Top Brands</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Brand</th><th>Val Share %</th><th>WD %</th><th>Dist Eff</th><th>Interpretation</th></tr></thead><tbody>
+<tr><td>ELVIVE</td><td>10.22%</td><td>21.67</td><td>47.16</td><td>Highest efficiency; premium pricing</td></tr>
+<tr><td>PANTENE</td><td>7.98%</td><td>19.57</td><td>40.78</td><td>Strong efficiency; MNC premium</td></tr>
+<tr><td>GARNIER</td><td>8.71%</td><td>24.41</td><td>35.69</td><td>Above average; MNC strength</td></tr>
+<tr><td>COSMAL CURE</td><td>10.21%</td><td>36.84</td><td>27.72</td><td>Leader; lower efficiency—mass</td></tr>
+<tr><td>TRESEMME</td><td>6.91%</td><td>36.24</td><td>19.07</td><td>Moderate; mass-premium</td></tr>
+<tr><td>IPEK</td><td>6.63%</td><td>30.93</td><td>21.45</td><td>Mid efficiency; volume</td></tr>
+<tr><td>SOFT WAVE</td><td>6.28%</td><td>53.91</td><td>11.65</td><td>Low efficiency; ultra-mass</td></tr>
+<tr><td>HAIR</td><td>3.57%</td><td>27.90</td><td>12.81</td><td>Low; volume-driven</td></tr>
+<tr><td>VATIKA</td><td>0.81%</td><td>3.77</td><td>21.41</td><td>Good efficiency; tiny base—scale needed</td></tr>
+<tr><td>ASSAYEL</td><td>1.59%</td><td>9.84</td><td>16.12</td><td>Moderate; niche Iraqi</td></tr>
+<tr><td>UNO CARE</td><td>2.33%</td><td>9.66</td><td>24.13</td><td>High; premium positioning</td></tr>
+</tbody></table></div></div>
+
+<div id="sec22" class="sec"><h2>22. Growth Decomposition<span>MoM Share Movement: Vol pp, Val pp, Price Effect — Top 10 Brands</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Brand</th><th>Vol pp</th><th>Val pp</th><th>Price Effect</th><th>Driver</th></tr></thead><tbody>
+<tr><td>IPEK</td><td>+1.47</td><td>+1.00</td><td>-0.47</td><td>Volume growth; volume-led</td></tr>
+<tr><td>SOFT WAVE</td><td>+0.67</td><td>+0.75</td><td>+0.08</td><td>Volume growth; slight premium</td></tr>
+<tr><td>ELVIVE</td><td>+0.46</td><td>+0.91</td><td>+0.45</td><td>Price-driven premium growth</td></tr>
+<tr><td>TRESEMME</td><td>+0.39</td><td>+0.54</td><td>+0.15</td><td>Mixed; slight premium</td></tr>
+<tr><td>GARNIER</td><td>+0.17</td><td>+0.63</td><td>+0.46</td><td>Price-driven; volume flat</td></tr>
+<tr><td>HAIR</td><td>+0.56</td><td>+0.27</td><td>-0.29</td><td>Volume growth; discount pressure</td></tr>
+<tr><td>ASSAYEL</td><td>+0.09</td><td>+0.09</td><td>-0.00</td><td>Flat growth; neutral</td></tr>
+<tr><td>COSMAL CURE</td><td>-1.24</td><td>-0.76</td><td>+0.49</td><td>Volume decline; price increase cushion</td></tr>
+<tr><td>PANTENE</td><td>-0.24</td><td>+0.22</td><td>+0.46</td><td>Volume decline; price premiumization</td></tr>
+<tr><td>VATIKA</td><td>+0.05</td><td>+0.07</td><td>+0.02</td><td>Stagnant; needs activation</td></tr>
+</tbody></table></div></div>
+
+<div id="sec23" class="sec"><h2>23. Channel Pricing Analysis<span>PPV by Channel & Top Brand Positioning</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Channel</th><th>Avg PPV</th><th>Top Brand</th><th>Top PPV</th><th>Brands</th></tr></thead><tbody>
+<tr><td>WASH-OUT (Standard)</td><td>7,243</td><td>COSMAL CURE</td><td>5,085</td><td>283</td></tr>
+<tr><td>WASH-OUT LEAVE-IN (Premium)</td><td>7,214</td><td>TRESEMME</td><td>7,187</td><td>156</td></tr>
+</tbody></table></div></div>
+
+<div id="sec24" class="sec"><h2>24. Distribution Benchmarking<span>Top 20 Brands: WD vs ND Comparison</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Brand</th><th>WD %</th><th>ND %</th><th>Gap pp</th><th>Interpretation</th></tr></thead><tbody>
+<tr><td>SOFT WAVE</td><td>53.91</td><td>16.35</td><td>37.56</td><td>Concentrated outlets; broad value</td></tr>
+<tr><td>COSMAL CURE</td><td>36.84</td><td>8.37</td><td>28.47</td><td>Few heavy outlets</td></tr>
+<tr><td>TRESEMME</td><td>36.24</td><td>8.06</td><td>28.18</td><td>Selective high-weight</td></tr>
+<tr><td>IPEK</td><td>30.93</td><td>25.75</td><td>5.18</td><td>Broadest reach; evenly distributed</td></tr>
+<tr><td>HAIR</td><td>27.90</td><td>22.71</td><td>5.19</td><td>Good numeric coverage</td></tr>
+<tr><td>GARNIER</td><td>24.41</td><td>5.01</td><td>19.40</td><td>Selective premium</td></tr>
+<tr><td>ELVIVE</td><td>21.67</td><td>2.82</td><td>18.85</td><td>Ultra-selective premium only</td></tr>
+<tr><td>PANTENE</td><td>19.57</td><td>4.63</td><td>14.94</td><td>Selective; high-value outlets</td></tr>
+<tr><td>VATIKA</td><td>3.77</td><td>0.82</td><td>2.95</td><td>CRITICAL: Need numeric expansion</td></tr>
+</tbody></table></div></div>
+
+<div id="sec25" class="sec"><h2>25. Pricing Segmentation Overview<span>Brands by Price Tier</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Price Tier</th><th>PPV Range</th><th>Count</th><th>Mkt Vol %</th><th>Key Brands</th></tr></thead><tbody>
+<tr><td>Premium</td><td>≥15,000</td><td>56</td><td>8.54%</td><td>ELVIVE 15.5K, TOPPER 18.9K</td></tr>
+<tr><td>Mid-Premium</td><td>8,000-14,999</td><td>80</td><td>22.43%</td><td>GARNIER 11.6K, VATIKA 9.7K</td></tr>
+<tr><td>Mass</td><td>4,000-7,999</td><td>83</td><td>42.67%</td><td>TRESEMME 7.2K, SOFT WAVE 7.5K</td></tr>
+<tr><td>Economy</td><td><4,000</td><td>64</td><td>26.36%</td><td>HAIR 2.8K, DURU 3.5K</td></tr>
+</tbody></table></div></div>
+
+<div id="sec26" class="sec"><h2>26. Price Tier Brand Hierarchy<span>Top Brands Within Each Tier</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Tier</th><th>Rank</th><th>Brand</th><th>PPV</th><th>Vol KLT</th><th>Val Share %</th></tr></thead><tbody>
+<tr><td>Premium</td><td>1</td><td>TOPPER</td><td>18,951</td><td>12.77</td><td>2.13%</td></tr>
+<tr><td>Premium</td><td>2</td><td>ELVIVE</td><td>15,526</td><td>74.65</td><td>10.22%</td></tr>
+<tr><td>Premium</td><td>3</td><td>HEAD&SHOULDERS</td><td>12,946</td><td>11.65</td><td>1.33%</td></tr>
+<tr><td>Mid-Premium</td><td>1</td><td>GARNIER</td><td>11,629</td><td>84.96</td><td>8.71%</td></tr>
+<tr><td>Mid-Premium</td><td>2</td><td>PANTENE</td><td>12,830</td><td>70.55</td><td>7.98%</td></tr>
+<tr><td>Mid-Premium</td><td>3</td><td>VATIKA</td><td>9,676</td><td>9.46</td><td>0.81%</td></tr>
+<tr><td>Mass</td><td>1</td><td>TRESEMME</td><td>7,187</td><td>109.03</td><td>6.91%</td></tr>
+<tr><td>Mass</td><td>2</td><td>SOFT WAVE</td><td>7,535</td><td>94.53</td><td>6.28%</td></tr>
+<tr><td>Mass</td><td>3</td><td>IPEK</td><td>3,912</td><td>192.29</td><td>6.63%</td></tr>
+<tr><td>Economy</td><td>1</td><td>ASSAYEL</td><td>3,925</td><td>45.84</td><td>1.59%</td></tr>
+<tr><td>Economy</td><td>2</td><td>HAIR</td><td>2,798</td><td>144.88</td><td>3.58%</td></tr>
+<tr><td>Economy</td><td>3</td><td>DURU</td><td>3,498</td><td>38.58</td><td>1.19%</td></tr>
+</tbody></table></div></div>
+
+<div id="sec27" class="sec"><h2>27. Pack Size Overview<span>Volume, Value & Pricing by Size Band (Top 15)</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Size ml</th><th>Vol KLT</th><th>Vol %</th><th>PPV IQD</th><th>Positioning</th></tr></thead><tbody>
+<tr><td>1000</td><td>2,886.84</td><td>184.17%</td><td>6,321</td><td>Value bulk purchase</td></tr>
+<tr><td>600</td><td>1,739.48</td><td>110.98%</td><td>3,901</td><td>Economy mass appeal</td></tr>
+<tr><td>360</td><td>1,573.42</td><td>100.38%</td><td>13,057</td><td>Premium concentrated formula</td></tr>
+<tr><td>725</td><td>1,005.04</td><td>64.12%</td><td>2,811</td><td>Value popular size</td></tr>
+<tr><td>400</td><td>923.04</td><td>58.89%</td><td>8,307</td><td>Mid-premium standard</td></tr>
+<tr><td>700</td><td>750.50</td><td>47.88%</td><td>7,231</td><td>Mid-range standard</td></tr>
+<tr><td>750</td><td>724.32</td><td>46.21%</td><td>9,575</td><td>Mid-premium standard</td></tr>
+<tr><td>800</td><td>427.21</td><td>27.26%</td><td>8,935</td><td>Mid-premium premium pack</td></tr>
+<tr><td>625</td><td>384.89</td><td>24.56%</td><td>3,889</td><td>Economy-mid value pack</td></tr>
+<tr><td>500</td><td>113.55</td><td>7.24%</td><td>14,031</td><td>Premium travel size</td></tr>
+<tr><td>300</td><td>12.85</td><td>0.82%</td><td>21,311</td><td>Ultra-premium sample</td></tr>
+<tr><td>200</td><td>10.77</td><td>0.69%</td><td>20,819</td><td>Ultra-premium trial</td></tr>
+</tbody></table></div></div>
+
+<div id="sec28" class="sec"><h2>28. Pack Cross-Tab Analysis<span>Channel & Region Cross-Cuts</span></h2>
+<div class="cd"><p><strong>Key Finding:</strong> Smaller sizes (300-500ml) command premium pricing (14-21K PPV) suggesting trial/premium positioning. Bulk sizes (600-1000ml) at value pricing (2.8-6.3K PPV) drive volume. <strong>Vatika Opportunity:</strong> Currently no size data available. Recommendation: Enter via 400ml standard pack at 9-10K PPV in MODERN TRADE, then expand to 750ml premium tier in PERFUMERY. Consider introducing 200ml trial pack for salon giveaways.</p></div>
+</div>
+
+<div id="sec29" class="sec"><h2>29. Regional Deep-Dive: Geography & Growth<span>Top 10 Regional Markets</span></h2>
+<div class="tbl-group"><table class="tbl"><thead><tr>
+<th>Region</th><th>Vol KLT</th><th>Val Mn IQD</th><th>PPV</th><th>Top Brand</th><th>Opportunity</th></tr></thead><tbody>
+<tr><td>PERFUMERY</td><td>1,747.92</td><td>16,110.7</td><td>9,207</td><td>COSMAL CURE 17.2%</td><td>Premium tier; Vatika underpenetrated</td></tr>
+<tr><td>BAGHDAD</td><td>1,399.91</td><td>11,709.8</td><td>8,365</td><td>COSMAL CURE 16.5%</td><td>Metro hub; distribution growth</td></tr>
+<tr><td>TRADITIONAL TRADE</td><td>1,072.62</td><td>4,858.5</td><td>4,527</td><td>COSMAL CURE 18.8%</td><td>Unstructured; new distributor model</td></tr>
+<tr><td>SOUTH</td><td>670.58</td><td>4,347.9</td><td>6,486</td><td>COSMAL CURE 15.6%</td><td>Regional expansion; Vatika 0.67%</td></tr>
+<tr><td>NORTH</td><td>549.11</td><td>3,598.8</td><td>6,556</td><td>IPEK 12.4%</td><td>Turkish strength; competitive</td></tr>
+<tr><td>KURDISTAN</td><td>412.34</td><td>2,849.0</td><td>6,912</td><td>COSMAL CURE 17.1%</td><td>Mid-tier growth market</td></tr>
+<tr><td>MODERN TRADE</td><td>402.15</td><td>2,644.5</td><td>6,578</td><td>TRESEMME 27.1%</td><td>Organized retail; Vatika strength</td></tr>
+</tbody></table></div></div>
+
+<div id="sec30" class="sec"><h2>30. Variant Analysis — Sub-Brand Performance<span>Top Sub-Categories & Vatika Opportunity</span></h2>
+<div class="cd"><p><strong>Critical Finding:</strong> Market contains 309 sub-categories/variants. Vatika appears as single aggregate. Competitive analysis shows fragmentation across multiple sub-brands: COSMAL CURE (multiple variants), ELVIVE (3-5 range variants: oil, color, repair), IPEK (standard + variants).</p>
+<p><strong>Vatika Launch Roadmap:</strong></p>
+<p>1. <strong>Vatika Oil</strong> (moisturizing) – position vs SOFT WAVE, capture 2-3 KLT<br>2. <strong>Vatika Repair</strong> (damage control) – position vs ELVIVE, 2-3 KLT<br>3. <strong>Vatika Pure</strong> (natural ingredients) – position vs ASSAYEL value, 2-3 KLT<br>4. <strong>Vatika Standard</strong> (core bulk pack) – mass volume driver, 6+ KLT<br>5. <strong>Vatika Premium</strong> (salon-grade) – position at 12K+ PPV, 1-2 KLT</p>
+<p><strong>Revenue Projection:</strong> Each variant 2-3 KLT at different PPV. Base case: 9.46 → 18+ KLT in 18 months with distribution support. Value @ 10K avg PPV = 180+ Mn IQD (vs current 91.5 Mn = +97% growth).</p></div>
+</div>
+
+</div></body></html>
